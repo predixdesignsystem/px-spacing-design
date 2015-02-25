@@ -2,7 +2,8 @@
   "name": "px-spacing-design",
   "version": "0.0.1",
   "authors": [
-    "General Electric"
+    "General Electric",
+    "Harry Roberts <harry@csswizardry.com>"
   ],
   "description": "Spacing helper classes for Predix Experience",
   "main": "_trumps.spacing.scss",
