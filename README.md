@@ -17,7 +17,9 @@ Install this module and its dependencies using bower:
 
 Once installed, `@import` into your project's Sass file in its Trumps layer:
 
-    @import "px-spacing-design/sass/trumps.spacing";
+    @import "../px-spacing-design/trumps.spacing";
+
+See [px-getting-started](https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
 
 ## Import once
 
