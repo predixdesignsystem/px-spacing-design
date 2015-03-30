@@ -7,19 +7,19 @@ The Predix Experience Spacing module is a small collection of helper classes for
 Px's Spacing Responsive module depends on two other Px and inuitcss modules:
 
 * [settings.defaults](https://github.com/inuitcss/settings.defaults)
-* [px-functions-design](https://github.sw.ge.com/pxc/px-functions-design)
+* [px-functions-design](https://github.sw.ge.com/PXd/px-functions-design)
 
 ## Installation
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.sw.ge.com/pxc/px-spacing-design.git
+    bower install --save https://github.sw.ge.com/PXd/px-spacing-design.git
 
 Once installed, `@import` into your project's Sass file in its Trumps layer:
 
     @import "../px-spacing-design/trumps.spacing";
 
-See [px-getting-started](https://github.sw.ge.com/pxc/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
+See [px-getting-started](https://github.sw.ge.com/PXd/px-getting-started#a-note-about-relative-import-paths) for an explanation of the `../`
 
 ## Import once
 
