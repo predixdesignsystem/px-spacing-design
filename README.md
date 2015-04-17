@@ -4,9 +4,9 @@ The Predix Experience Spacing module is a small collection of helper classes for
 
 ## Dependencies
 
-Px's Spacing Responsive module depends on two other Px and inuitcss modules:
+Px's Spacing Responsive module depends on two other PXd modules:
 
-* [settings.defaults](https://github.com/inuitcss/settings.defaults)
+* [px-defaults-design](https://github.sw.ge.com/PXd/px-defaults-design)
 * [px-functions-design](https://github.sw.ge.com/PXd/px-functions-design)
 
 ## Installation
