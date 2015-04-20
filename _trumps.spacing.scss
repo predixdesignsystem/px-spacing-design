@@ -30,6 +30,8 @@ $inuit-enable-margins--negative-small:  false !default;
 $inuit-enable-margins--negative-large:  false !default;
 $inuit-enable-margins--negative-huge:   false !default;
 
+$inuit-enable-margins--rtl:             false !default;
+
 $inuit-enable-margins--none:            false !default;
 
 $inuit-enable-paddings:                 false !default;
@@ -227,6 +229,28 @@ $inuit-enable-paddings--none:           false !default;
       .#{$inuit-spacing-namespace}-ml\+\+ { margin-left:      quadruple(-$inuit-margin) !important; }
       .#{$inuit-spacing-namespace}-mh\+\+ { margin-right:     quadruple(-$inuit-margin) !important; margin-left:   quadruple(-$inuit-margin) !important; }
       .#{$inuit-spacing-namespace}-mv\+\+ { margin-top:       quadruple(-$inuit-margin) !important; margin-bottom: quadruple(-$inuit-margin) !important; }
+  
+  }
+  
+  
+  @if ($inuit-enable-margins--rtl == true) {
+  
+      /**
+       * Switch left and right margins when right-to-left language settings in use.
+       */
+  
+      [dir=rtl] {
+        .#{$inuit-spacing-namespace}mr        { margin-right: 0 !important;                         margin-left: $inuit-margin !important; }
+        .#{$inuit-spacing-namespace}ml        { margin-right: $inuit-margin !important;             margin-left: 0 !important; }
+        .#{$inuit-spacing-namespace}mr-       { margin-right: 0 !important;                         margin-left: halve($inuit-margin) !important; }
+        .#{$inuit-spacing-namespace}ml-       { margin-right: halve($inuit-margin) !important;      margin-left: 0 !important; }
+        .#{$inuit-spacing-namespace}mr--      { margin-right: 0 !important;                         margin-left: quarter($inuit-margin) !important; }
+        .#{$inuit-spacing-namespace}ml--      { margin-right: quarter($inuit-margin) !important;    margin-left: 0 !important; }
+        .#{$inuit-spacing-namespace}mr\+      { margin-right: 0 !important;                         margin-left: double($inuit-margin) !important; }
+        .#{$inuit-spacing-namespace}ml\+      { margin-right: double($inuit-margin) !important;     margin-left: 0 !important; }
+        .#{$inuit-spacing-namespace}mr\+\+    { margin-right: 0 !important;                         margin-left: quadruple($inuit-margin) !important; }
+        .#{$inuit-spacing-namespace}ml\+\+    { margin-right: quadruple($inuit-margin) !important;  margin-left: 0 !important; }
+      }
   
   }
   
