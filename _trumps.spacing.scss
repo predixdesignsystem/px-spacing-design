@@ -40,6 +40,8 @@ $inuit-enable-paddings--small:          false !default;
 $inuit-enable-paddings--large:          false !default;
 $inuit-enable-paddings--huge:           false !default;
 
+$inuit-enable-paddings--rtl:            false !default;
+
 $inuit-enable-paddings--none:           false !default;
 
 @if import-once('trumps.spacing') {
@@ -358,6 +360,28 @@ $inuit-enable-paddings--none:           false !default;
       .#{$inuit-spacing-namespace}pl0     { padding-left:     0 !important; }
       .#{$inuit-spacing-namespace}ph0     { padding-right:    0 !important; padding-left:     0 !important; }
       .#{$inuit-spacing-namespace}pv0     { padding-top:      0 !important; padding-bottom:   0 !important; }
+  
+  }
+  
+  
+  @if ($inuit-enable-paddings--rtl == true) {
+  
+      /**
+       * Switch left and right paddings when right-to-left language settings in use.
+       */
+  
+      [dir=rtl] {
+        .#{$inuit-spacing-namespace}pr        { padding-right: 0 !important;                         padding-left: $inuit-padding !important; }
+        .#{$inuit-spacing-namespace}pl        { padding-right: $inuit-padding !important;            padding-left: 0 !important; }
+        .#{$inuit-spacing-namespace}pr-       { padding-right: 0 !important;                         padding-left: halve($inuit-padding) !important; }
+        .#{$inuit-spacing-namespace}pl-       { padding-right: halve($inuit-padding) !important;     padding-left: 0 !important; }
+        .#{$inuit-spacing-namespace}pr--      { padding-right: 0 !important;                         padding-left: quarter($inuit-padding) !important; }
+        .#{$inuit-spacing-namespace}pl--      { padding-right: quarter($inuit-padding) !important;   padding-left: 0 !important; }
+        .#{$inuit-spacing-namespace}pr\+      { padding-right: 0 !important;                         padding-left: double($inuit-padding) !important; }
+        .#{$inuit-spacing-namespace}pl\+      { padding-right: double($inuit-padding) !important;    padding-left: 0 !important; }
+        .#{$inuit-spacing-namespace}pr\+\+    { padding-right: 0 !important;                         padding-left: quadruple($inuit-padding) !important; }
+        .#{$inuit-spacing-namespace}pl\+\+    { padding-right: quadruple($inuit-padding) !important; padding-left: 0 !important; }
+      }
   
   }
 
