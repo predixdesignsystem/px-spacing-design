@@ -251,13 +251,13 @@ $inuit-enable-paddings--none:           false !default;
                                                 margin-left: $inuit-base-spacing-unit--tiny !important; }
         .#{$inuit-spacing-namespace}ml--      { margin-right: $inuit-base-spacing-unit--tiny !important;
                                                 margin-left: 0 !important; }
-        .#{$inuit-spacing-namespace}mr\+      { margin-right: 0 !important;
+        .#{$inuit-spacing-namespace}mr\00002b      { margin-right: 0 !important;
                                                 margin-left: $inuit-base-spacing-unit--large !important; }
-        .#{$inuit-spacing-namespace}ml\+      { margin-right: $inuit-base-spacing-unit--large !important;
+        .#{$inuit-spacing-namespace}ml\00002b      { margin-right: $inuit-base-spacing-unit--large !important;
                                                 margin-left: 0 !important; }
-        .#{$inuit-spacing-namespace}mr\+\+    { margin-right: 0 !important;
+        .#{$inuit-spacing-namespace}mr\00002b\00002b    { margin-right: 0 !important;
                                                 margin-left: $inuit-base-spacing-unit--huge !important; }
-        .#{$inuit-spacing-namespace}ml\+\+    { margin-right: $inuit-base-spacing-unit--huge !important;
+        .#{$inuit-spacing-namespace}ml\00002b\00002b    { margin-right: $inuit-base-spacing-unit--huge !important;
                                                 margin-left: 0 !important; }
       }
   
@@ -390,13 +390,13 @@ $inuit-enable-paddings--none:           false !default;
                                                 padding-left: $inuit-base-spacing-unit--tiny !important; }
         .#{$inuit-spacing-namespace}pl--      { padding-right: $inuit-base-spacing-unit--tiny !important;   
                                                 padding-left: 0 !important; }
-        .#{$inuit-spacing-namespace}pr\+      { padding-right: 0 !important;                         
+        .#{$inuit-spacing-namespace}pr\00002b      { padding-right: 0 !important;                         
                                                 padding-left: $inuit-base-spacing-unit--large !important; }
-        .#{$inuit-spacing-namespace}pl\+      { padding-right: $inuit-base-spacing-unit--large !important;    
+        .#{$inuit-spacing-namespace}pl\00002b      { padding-right: $inuit-base-spacing-unit--large !important;    
                                                 padding-left: 0 !important; }
-        .#{$inuit-spacing-namespace}pr\+\+    { padding-right: 0 !important;                         
+        .#{$inuit-spacing-namespace}pr\00002b\00002b    { padding-right: 0 !important;                         
                                                 padding-left: $inuit-base-spacing-unit--huge !important; }
-        .#{$inuit-spacing-namespace}pl\+\+    { padding-right: $inuit-base-spacing-unit--huge !important; 
+        .#{$inuit-spacing-namespace}pl\00002b\00002b    { padding-right: $inuit-base-spacing-unit--huge !important; 
                                                 padding-left: 0 !important; }
       }
   
