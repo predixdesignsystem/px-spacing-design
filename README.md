@@ -8,7 +8,7 @@ You can review Sass Documentation here: https://github.build.ge.com/pages/PXd/px
 
 ## Dependency
 
-Px's Spacing Responsive module depends on one other PXd module:
+Px's Spacing module depends on one other PXd module:
 
 * [px-defaults-design](https://github.build.ge.com/PXd/px-defaults-design)
 
