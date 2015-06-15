@@ -1,6 +1,6 @@
 {
   "name": "px-spacing-design",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -23,6 +23,6 @@
     "tests"
   ],
   "dependencies": {
-    "px-defaults-design": "git://github.build.ge.com/PXd/px-defaults-design.git#~0.1.0"
+    "px-defaults-design": "git://github.build.ge.com/PXd/px-defaults-design.git#~0.2.0"
   }
 }
