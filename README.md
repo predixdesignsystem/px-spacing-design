@@ -2,9 +2,7 @@
 
 The Predix Experience Spacing module is a collection of helper classes for spacings like margin and padding. This module is a fork of inuitcss' [spacing](https://github.com/inuitcss/trumps.spacing) module.
 
-## Sass Documentation
 
-You can review Sass Documentation here: https://github.com/pages/PredixDev/px-spacing-design/sassdoc
 
 ## Dependency
 
