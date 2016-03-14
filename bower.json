@@ -1,6 +1,6 @@
 {
   "name": "px-spacing-design",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -14,7 +14,7 @@
   ],
   "license": "Apache 2",
   "homepage": "https://github.com/PredixDev/px-spacing-design.git",
-  "private": true,
+  "private": false,
   "ignore": [
     "**/.*",
     "node_modules",
