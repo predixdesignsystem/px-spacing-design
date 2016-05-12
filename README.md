@@ -1,12 +1,10 @@
 # Spacing
 
-The Predix Experience Spacing module is a collection of helper classes for spacings like margin and padding. This module is a fork of inuitcss' [spacing](https://github.com/inuitcss/trumps.spacing) module.
-
-
+The Predix UI Spacing module is a collection of helper classes for spacings like margin and padding. This module is a fork of inuitcss' [spacing](https://github.com/inuitcss/trumps.spacing) module.
 
 ## Dependency
 
-Px's Spacing module depends on one other PXd module:
+Predix UI's Spacing module depends on one other PX module:
 
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
 
@@ -14,9 +12,9 @@ Px's Spacing module depends on one other PXd module:
 
 Install this module and its dependencies using bower:
 
-    bower install --save https://github.com/PredixDev/px-spacing-design.git
+    bower install --save px-spacing-design
 
-Once installed, `@import` into your project's Sass file in its Trumps layer:
+Once installed, `@import` into your project's Sass file in its **Trumps** layer:
 
     @import "px-spacing-design/_trumps.spacing.scss";
 
@@ -29,25 +27,25 @@ These flags are available and, if needed, should be set to `true` prior to impor
     $inuit-enable-margins--small
     $inuit-enable-margins--large
     $inuit-enable-margins--huge
-    
+
     $inuit-enable-margins--negative
     $inuit-enable-margins--negative-tiny
     $inuit-enable-margins--negative-small
     $inuit-enable-margins--negative-large
     $inuit-enable-margins--negative-huge
-    
+
     $inuit-enable-margins--none
-    
+
     $inuit-enable-margins--rtl
-    
+
     $inuit-enable-paddings
     $inuit-enable-paddings--tiny
     $inuit-enable-paddings--small
     $inuit-enable-paddings--large
     $inuit-enable-paddings--huge
-    
+
     $inuit-enable-paddings--none
-    
+
     $inuit-enable-paddings--rtl
 
 The conventions used in the classes in the spacing module are as follows:
@@ -238,3 +236,4 @@ These classes are available if the following variable flags are set to `true`:
 * `u-ph0`: remove padding right and left
 * `u-pv0`: remove padding top and bottom
 
+view the full API [here](http://predixdev.github.io/px-spacing-design/sassdoc/)

@@ -1,6 +1,6 @@
 {
   "name": "px-spacing-design",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -20,7 +20,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "OSS_Notice.pdf"
   ],
   "dependencies": {
     "px-defaults-design": "https://github.com/PredixDev/px-defaults-design.git#~0.2.0"
