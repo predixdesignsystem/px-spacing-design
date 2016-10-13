@@ -35,16 +35,14 @@ PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
 // Component
 
 #parent {
-  content: "";
-  display: inline-block;
+  display: block;
   width: 250px;
   height: 100px;
   background-color: green;
   opacity: 0.5;
 }
 #child {
-  content: "";
-  display: inline-block;
+  display: block;
   width: 100%;
   height: 100%;
   background-color: blue;

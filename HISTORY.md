@@ -1,3 +1,7 @@
+v0.3.10
+==============================
+* fixed display issue in demo
+
 v0.3.9
 ==============================
 * added new demo and auto-ghp
