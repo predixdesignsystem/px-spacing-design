@@ -1,11 +1,11 @@
 {
   "name": "px-spacing-design",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
   ],
-  "description": "Spacing helper classes for Predix Experience",
+  "description": "Spacing helper classes for Predix UI",
   "main": "_trumps.spacing.scss",
   "keywords": [
     "sass",
@@ -18,11 +18,15 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests",
+    "sass",
+    ".github",
     "OSS_Notice.pdf"
   ],
   "dependencies": {
-    "px-defaults-design": "https://github.com/PredixDev/px-defaults-design.git#~0.2.0"
+    "px-defaults-design": "~0.2.11"
+  },
+  "devDependencies": {
+    "px-sass-doc": "~0.1.7",
+    "px-starter-kit-design": "~0.6.0"
   }
 }

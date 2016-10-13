@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>px-spacing-design Demo</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Boilerplate: Import Libraries -->
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="../px-theme/px-theme-styles.html" />
+  <style include="px-theme-styles" is="custom-style"></style>
+  <link rel="import" href="../px-sass-doc/px-sass-doc.html" />
+  <link rel="import" href="../px-polymer-font-awesome/polymer-font-awesome.html" />
+
+  <!-- 0: Import Module Styles -->
+  <link rel="stylesheet" type="text/css" href="css/px-spacing-design-demo.css" />
+</head>
+<body>
+<template id="just-for-demo" is="dom-bind">
+
+<!-- 1: Describe Module -->
+<px-sass-doc
+  module-name="px-spacing-design"
+  description="The Predix UI Spacing module is a collection of helper classes for spacings like margin and padding."
+  layer="trumps"
+  sassdoc-path="sassdoc.json"
+  dependencies='[
+    "https://github.com/PredixDev/px-defaults-design"
+  ]'
+  selected-options="{{selectedOptions}}">
+
+<!-- 2: Set Options -->
+<px-sass-doc-option
+  option-name="Margin Size"
+  choose-with="dropdown"
+  choices='[
+    "negative-huge",
+    "negative-large",
+    "negative-regular",
+    "negative-small",
+    "negative-tiny",
+    "none",
+    "tiny",
+    "small",
+    "regular (default)",
+    "large",
+    "huge"
+  ]'
+  default-choice="regular (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Margin Direction"
+  choose-with="dropdown"
+  choices='[
+    "all (default)",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "vertical (top/bottom)",
+    "horizontal (left/right)"
+  ]'
+  default-choice="all (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Padding Size"
+  choose-with="dropdown"
+  choices='[
+    "none",
+    "tiny",
+    "small",
+    "regular (default)",
+    "large",
+    "huge"
+  ]'
+  default-choice="regular (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Padding Direction"
+  choose-with="dropdown"
+  choices='[
+    "all (default)",
+    "top",
+    "right",
+    "bottom",
+    "left",
+    "vertical (top/bottom)",
+    "horizontal (left/right)"
+  ]'
+  default-choice="all (default)">
+</px-sass-doc-option>
+
+<px-sass-doc-option
+  option-name="Reverse RTL"
+  choose-with="boolean">
+</px-sass-doc-option>
+
+<!-- 3: Make HTML Demo -->
+<section id="demoHTML" data-slot="demoHTML" style="border: 1px solid black; background-color: orange; opacity: 0.5;" dir="{{direction}}">
+<div id="parent" class$="{{spacingClasses}}">
+  <div id="child"></div>
+</div>
+</section>
+
+<!-- 4: Set Import Slot -->
+<section data-slot="import">
+{{importCode}}
+</section>
+
+<!-- 5: Set Usage HTML -->
+<section data-slot="intro">
+The conventions used for the classes in the spacing module are as follows:
+```
+.u-[negative][type][direction][size]
+```
+Where:
+- [negative] can either be a '-' for negative, or omitted for positive (note: paddings must always be positive)
+- [type] can either be an 'm' for margin, or a 'p' for padding
+- [direction] can be 't' for top, 'r' for right, 'b' for bottom, 'l' for left, 'h' for horizontal (left and right), 'v' for vertical (top and bottom), or omitted for all directions
+- [size] can be '0' for none, '--' for tiny, '-' for small, omitted for regular, '+' for large, or '++' for huge
+
+The values for [size] are assigned in the dependent library [px-defaults-design](https://github.com/PredixDev/px-defaults-design) and are based on the `$inuit-base-font-size` variable.
+</section>
+
+<section data-slot="usage">
+Here is an example with huge margins in all directions and tiny padding in all directions:
+```
+<div class="u-m++ u-p--"></div>
+```
+The demo above shows one margin and one padding class, but they can also be stacked, like in the following example. Huge margin on top, tiny margin on the bottom:
+```
+<div class="u-mt++ u-mb--"></div>
+```
+You can add as many margin and padding utility classes as you need to achieve the exact layout required.
+</section>
+
+</px-sass-doc>
+</template>
+
+<!-- 6: Handle selectedOptions, update demo -->
+<script>
+  var template = document.querySelector('template[is=dom-bind]');
+
+  document.addEventListener('px-sass-doc-options-updated', function(evt) {
+    template.importCode = template._importCode();
+    template.spacingClasses = template._spacingClasses();
+    template.direction = _direction();
+  });
+
+  template._spacingClasses = function() {
+    var opts = template.selectedOptions || {}, strings = [], margin="u-", padding="u-p";
+    if(opts["Margin Size"].indexOf('negative') > -1)  margin+="-";
+                                                      margin+="m";
+    if(opts["Margin Direction"] === "top")            margin+="t";
+    if(opts["Margin Direction"] === "right")          margin+="r";
+    if(opts["Margin Direction"] === "bottom")         margin+="b";
+    if(opts["Margin Direction"] === "left")           margin+="l";
+    if(opts["Margin Direction"] === "vertical")       margin+="v";
+    if(opts["Margin Direction"] === "horizontal")     margin+="h";
+    if(opts["Margin Size"] === "none")                margin+="0";
+    if(opts["Margin Size"].indexOf('tiny') > -1)      margin+="--";
+    if(opts["Margin Size"].indexOf('small') > -1)     margin+="-";
+    if(opts["Margin Size"].indexOf('large') > -1)     margin+="+";
+    if(opts["Margin Size"].indexOf('huge') > -1)      margin+="++";
+    if(opts["Padding Direction"] === "top")           padding+="t";
+    if(opts["Padding Direction"] === "right")         padding+="r";
+    if(opts["Padding Direction"] === "bottom")        padding+="b";
+    if(opts["Padding Direction"] === "left")          padding+="l";
+    if(opts["Padding Direction"] === "vertical")      padding+="v";
+    if(opts["Padding Direction"] === "horizontal")    padding+="h";
+    if(opts["Padding Size"] === "none")               padding+="0";
+    if(opts["Padding Size"] === 'tiny')               padding+="--";
+    if(opts["Padding Size"] === 'small')              padding+="-";
+    if(opts["Padding Size"] === 'large')              padding+="+";
+    if(opts["Padding Size"] === 'huge')               padding+="++";
+
+    strings.push(margin);
+    strings.push(padding);
+    return strings.join(" ").trim();
+  };
+
+  template._importCode = function() {
+    var opts = template.selectedOptions || {}, strings = [];
+    if (opts["Margin Size"] === "negative-huge")      strings.push("$inuit-enable-margins--negative-huge : true;");
+    if (opts["Margin Size"] === "negative-large")     strings.push("$inuit-enable-margins--negative-large : true;");
+    if (opts["Margin Size"] === "negative")           strings.push("$inuit-enable-margins--negative : true;");
+    if (opts["Margin Size"] === "negative-small")     strings.push("$inuit-enable-margins--negative-small : true;");
+    if (opts["Margin Size"] === "negative-tiny")      strings.push("$inuit-enable-margins--negative-tiny : true;");
+    if (opts["Margin Size"] === "none")               strings.push("$inuit-enable-margins--none : true;");
+    if (opts["Margin Size"] === "tiny")               strings.push("$inuit-enable-margins--tiny : true;");
+    if (opts["Margin Size"] === "small")              strings.push("$inuit-enable-margins--small : true;");
+    if (opts["Margin Size"] === "regular (default)")  strings.push("$inuit-enable-margins : true;");
+    if (opts["Margin Size"] === "large")              strings.push("$inuit-enable-margins--large : true;");
+    if (opts["Margin Size"] === "huge")               strings.push("$inuit-enable-margins--huge : true;");
+    if (opts["Reverse RTL"] === true)                 strings.push("$inuit-enable-margins--rtl : true;");
+    if (opts["Padding Size"] === "none")              strings.push("$inuit-enable-paddings--none : true;");
+    if (opts["Padding Size"] === "tiny")              strings.push("$inuit-enable-paddings--tiny : true;");
+    if (opts["Padding Size"] === "small")             strings.push("$inuit-enable-paddings--small : true;");
+    if (opts["Padding Size"] === "regular (default)") strings.push("$inuit-enable-paddings : true;");
+    if (opts["Padding Size"] === "large")             strings.push("$inuit-enable-paddings--large : true;");
+    if (opts["Padding Size"] === "huge")              strings.push("$inuit-enable-paddings--huge : true;");
+    if (opts["Reverse RTL"] === true)                 strings.push("$inuit-enable-paddings--rtl : true;");
+    return (strings.join("\n") + "\n@import 'px-spacing-design/_trumps.spacing.scss';").trim();
+  };
+
+  _direction = function() {
+    var opts = template.selectedOptions || {};
+    if(opts["Reverse RTL"] === true) {
+      return 'rtl';
+    }
+    else {
+      return 'ltr';
+    }
+  }
+</script>
+
+</body>
+</html>

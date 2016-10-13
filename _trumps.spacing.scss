@@ -13,66 +13,106 @@
 
 @import "px-defaults-design/_settings.defaults.scss";
 
-/// @type String [default] - Prepend value for all generated classes
+/// Prepend value for all generated classes
+/// @group px-spacing-design:variables:style
+/// @type String [default]
 $inuit-spacing-namespace                : $inuit-namespace !default;
 
-/// @type Boolean [default] - Produce CSS for default margin sizes?
+/// Produce CSS for default margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins                   : false !default;
 
-/// @type Boolean [default] - Produce CSS for tiny margin sizes?
+/// Produce CSS for tiny margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--tiny             : false !default;
 
-/// @type Boolean [default] - Produce CSS for small margin sizes?
+/// Produce CSS for small margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--small            : false !default;
 
-/// @type Boolean [default] - Produce CSS for large margin sizes?
+/// Produce CSS for large margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--large            : false !default;
 
-/// @type Boolean [default] - Produce CSS for huge margin sizes?
+/// Produce CSS for huge margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--huge             : false !default;
 
-/// @type Boolean [default] - Produce CSS for default negative margin sizes?
+/// Produce CSS for default negative margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--negative         : false !default;
 
-/// @type Boolean [default] - Produce CSS for tiny negative margin sizes?
+/// Produce CSS for tiny negative margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--negative-tiny    : false !default;
 
-/// @type Boolean [default] - Produce CSS for small negative margin sizes?
+/// Produce CSS for small negative margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--negative-small   : false !default;
 
-/// @type Boolean [default] - Produce CSS for large negative margin sizes?
+/// Produce CSS for large negative margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--negative-large   : false !default;
 
-/// @type Boolean [default] - Produce CSS for huge negative margin sizes?
+/// Produce CSS for huge negative margin sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--negative-huge    : false !default;
 
-/// @type Boolean [default] - Produce CSS for swapping horizontal margins in RTL?
+/// Produce CSS for swapping horizontal margins in RTL?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--rtl              : false !default;
 
-/// @type Boolean [default] - Produce CSS for zero margins?
+/// Produce CSS for zero margins?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-margins--none             : false !default;
 
-/// @type Boolean [default] - Produce CSS for default padding sizes?
+/// Produce CSS for default padding sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings                  : false !default;
 
-/// @type Boolean [default] - Produce CSS for tiny padding sizes?
+/// Produce CSS for tiny padding sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--tiny            : false !default;
 
-/// @type Boolean [default] - Produce CSS for small padding sizes?
+/// Produce CSS for small padding sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--small           : false !default;
 
-/// @type Boolean [default] - Produce CSS for large padding sizes?
+/// Produce CSS for large padding sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--large           : false !default;
 
-/// @type Boolean [default] - Produce CSS for huge padding sizes?
+/// Produce CSS for huge padding sizes?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--huge            : false !default;
 
-/// @type Boolean [default] - Produce CSS for swapping horizontal paddings in RTL?
+/// Produce CSS for swapping horizontal paddings in RTL?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--rtl             : false !default;
 
-/// @type Boolean [default] - Produce CSS for zero paddings?
+/// Produce CSS for zero paddings?
+/// @group px-spacing-design:variables:flag
+/// @type Boolean [default]
 $inuit-enable-paddings--none            : false !default;
- 
+
 @if ($inuit-enable-margins == true) {
 
     /**
@@ -414,19 +454,19 @@ $inuit-enable-paddings--none            : false !default;
                                                         padding-left: 0 !important; }
       .#{$inuit-spacing-namespace}u-pr-                 { padding-right: 0 !important;
                                                         padding-left: $inuit-base-spacing-unit--small !important; }
-      .#{$inuit-spacing-namespace}u-pl-                 { padding-right: $inuit-base-spacing-unit--small !important;     
+      .#{$inuit-spacing-namespace}u-pl-                 { padding-right: $inuit-base-spacing-unit--small !important;
                                                         padding-left: 0 !important; }
-      .#{$inuit-spacing-namespace}u-pr--                { padding-right: 0 !important;                         
+      .#{$inuit-spacing-namespace}u-pr--                { padding-right: 0 !important;
                                                         padding-left: $inuit-base-spacing-unit--tiny !important; }
-      .#{$inuit-spacing-namespace}u-pl--                { padding-right: $inuit-base-spacing-unit--tiny !important;   
+      .#{$inuit-spacing-namespace}u-pl--                { padding-right: $inuit-base-spacing-unit--tiny !important;
                                                         padding-left: 0 !important; }
-      .#{$inuit-spacing-namespace}u-pr\00002b           { padding-right: 0 !important;                         
+      .#{$inuit-spacing-namespace}u-pr\00002b           { padding-right: 0 !important;
                                                         padding-left: $inuit-base-spacing-unit--large !important; }
-      .#{$inuit-spacing-namespace}u-pl\00002b           { padding-right: $inuit-base-spacing-unit--large !important;    
+      .#{$inuit-spacing-namespace}u-pl\00002b           { padding-right: $inuit-base-spacing-unit--large !important;
                                                         padding-left: 0 !important; }
-      .#{$inuit-spacing-namespace}u-pr\00002b\00002b    { padding-right: 0 !important;                         
+      .#{$inuit-spacing-namespace}u-pr\00002b\00002b    { padding-right: 0 !important;
                                                         padding-left: $inuit-base-spacing-unit--huge !important; }
-      .#{$inuit-spacing-namespace}u-pl\00002b\00002b    { padding-right: $inuit-base-spacing-unit--huge !important; 
+      .#{$inuit-spacing-namespace}u-pl\00002b\00002b    { padding-right: $inuit-base-spacing-unit--huge !important;
                                                         padding-left: 0 !important; }
     }
 
