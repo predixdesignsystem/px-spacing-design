@@ -1,3 +1,8 @@
+v0.3.11
+==============================
+* Updated dependencies
+* Updated boilerplate files
+
 v0.3.10
 ==============================
 * fixed display issue in demo
