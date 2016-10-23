@@ -39,13 +39,14 @@ PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
   width: 250px;
   height: 100px;
   background-color: green;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 #child {
   display: block;
   width: 100%;
   height: 100%;
   background-color: blue;
+  opacity: .5; 
 }
 
 $inuit-enable-margins : true;
