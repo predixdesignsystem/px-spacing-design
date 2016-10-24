@@ -1,3 +1,7 @@
+v0.3.13
+==============================
+* removed ?'s from sassdoc.json
+
 v0.3.12
 ==============================
 * updated look of demo and added classes to 'use in your project'

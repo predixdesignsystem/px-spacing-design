@@ -1,6 +1,6 @@
 [
     {
-        "description": "Produce CSS for default margin sizes?\n",
+        "description": "Produce CSS for default margin sizes\n",
         "commentRange": {
             "start": 21,
             "end": 23
@@ -26,7 +26,7 @@
         }
     },
     {
-        "description": "Produce CSS for tiny margin sizes?\n",
+        "description": "Produce CSS for tiny margin sizes\n",
         "commentRange": {
             "start": 26,
             "end": 28
@@ -52,7 +52,7 @@
         }
     },
     {
-        "description": "Produce CSS for small margin sizes?\n",
+        "description": "Produce CSS for small margin sizes\n",
         "commentRange": {
             "start": 31,
             "end": 33
@@ -78,7 +78,7 @@
         }
     },
     {
-        "description": "Produce CSS for large margin sizes?\n",
+        "description": "Produce CSS for large margin sizes\n",
         "commentRange": {
             "start": 36,
             "end": 38
@@ -104,7 +104,7 @@
         }
     },
     {
-        "description": "Produce CSS for huge margin sizes?\n",
+        "description": "Produce CSS for huge margin sizes\n",
         "commentRange": {
             "start": 41,
             "end": 43
@@ -130,7 +130,7 @@
         }
     },
     {
-        "description": "Produce CSS for default negative margin sizes?\n",
+        "description": "Produce CSS for default negative margin sizes\n",
         "commentRange": {
             "start": 46,
             "end": 48
@@ -156,7 +156,7 @@
         }
     },
     {
-        "description": "Produce CSS for tiny negative margin sizes?\n",
+        "description": "Produce CSS for tiny negative margin sizes\n",
         "commentRange": {
             "start": 51,
             "end": 53
@@ -182,7 +182,7 @@
         }
     },
     {
-        "description": "Produce CSS for small negative margin sizes?\n",
+        "description": "Produce CSS for small negative margin sizes\n",
         "commentRange": {
             "start": 56,
             "end": 58
@@ -208,7 +208,7 @@
         }
     },
     {
-        "description": "Produce CSS for large negative margin sizes?\n",
+        "description": "Produce CSS for large negative margin sizes\n",
         "commentRange": {
             "start": 61,
             "end": 63
@@ -234,7 +234,7 @@
         }
     },
     {
-        "description": "Produce CSS for huge negative margin sizes?\n",
+        "description": "Produce CSS for huge negative margin sizes\n",
         "commentRange": {
             "start": 66,
             "end": 68
@@ -260,7 +260,7 @@
         }
     },
     {
-        "description": "Produce CSS for swapping horizontal margins in RTL?\n",
+        "description": "Produce CSS for swapping horizontal margins in RTL\n",
         "commentRange": {
             "start": 71,
             "end": 73
@@ -286,7 +286,7 @@
         }
     },
     {
-        "description": "Produce CSS for zero margins?\n",
+        "description": "Produce CSS for zero margins\n",
         "commentRange": {
             "start": 76,
             "end": 78
@@ -312,7 +312,7 @@
         }
     },
     {
-        "description": "Produce CSS for default padding sizes?\n",
+        "description": "Produce CSS for default padding sizes\n",
         "commentRange": {
             "start": 81,
             "end": 83
@@ -338,7 +338,7 @@
         }
     },
     {
-        "description": "Produce CSS for tiny padding sizes?\n",
+        "description": "Produce CSS for tiny padding sizes\n",
         "commentRange": {
             "start": 86,
             "end": 88
@@ -364,7 +364,7 @@
         }
     },
     {
-        "description": "Produce CSS for small padding sizes?\n",
+        "description": "Produce CSS for small padding sizes\n",
         "commentRange": {
             "start": 91,
             "end": 93
@@ -390,7 +390,7 @@
         }
     },
     {
-        "description": "Produce CSS for large padding sizes?\n",
+        "description": "Produce CSS for large padding sizes\n",
         "commentRange": {
             "start": 96,
             "end": 98
@@ -416,7 +416,7 @@
         }
     },
     {
-        "description": "Produce CSS for huge padding sizes?\n",
+        "description": "Produce CSS for huge padding sizes\n",
         "commentRange": {
             "start": 101,
             "end": 103
@@ -442,7 +442,7 @@
         }
     },
     {
-        "description": "Produce CSS for swapping horizontal paddings in RTL?\n",
+        "description": "Produce CSS for swapping horizontal paddings in RTL\n",
         "commentRange": {
             "start": 106,
             "end": 108
@@ -468,7 +468,7 @@
         }
     },
     {
-        "description": "Produce CSS for zero paddings?\n",
+        "description": "Produce CSS for zero paddings\n",
         "commentRange": {
             "start": 111,
             "end": 113
