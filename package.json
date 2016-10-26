@@ -1,6 +1,6 @@
 {
   "name": "px-spacing-design",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "description": "Spacing helper classes for Predix UI",
   "private": false,
   "scripts": {
