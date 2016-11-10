@@ -1,6 +1,6 @@
 {
     "name": "px-spacing-design",
-    "version": "0.3.15",
+    "version": "0.3.16",
     "authors": [
         "General Electric",
         "Harry Roberts <harry@csswizardry.com>"
@@ -26,7 +26,7 @@
         "px-defaults-design": "~0.3.0"
     },
     "devDependencies": {
-        "px-sass-doc": "^0.2.9",
+        "px-sass-doc": "^0.2.10",
         "px-starter-kit-design": "~0.6.0"
     }
 }
