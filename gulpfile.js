@@ -1,16 +1,18 @@
-'use strict'
+'use strict';
+const path = require('path');
 const gulp = require('gulp');
 const pkg = require('./package.json');
 const $ = require('gulp-load-plugins')();
 const gulpSequence = require('gulp-sequence');
 const importOnce = require('node-sass-import-once');
+const stylemod = require('gulp-style-modules');
 const browserSync = require('browser-sync').create();
 const gulpif = require('gulp-if');
 const combiner = require('stream-combiner2');
 const bump = require('gulp-bump');
+const argv = require('yargs').argv;
 const sassdoc = require('sassdoc');
 const fs = require('fs');
-const argv = require('yargs').argv;
 
 const sassOptions = {
   importer: importOnce,
@@ -42,15 +44,20 @@ function buildCSS(){
   ]).on('error', handleError);
 }
 
-gulp.task('demosass', function() {
-  return gulp.src(['./sass/*-demo.scss'])
+gulp.task('sass', function() {
+  return gulp.src(['./sass/*.scss'])
     .pipe(buildCSS())
+    .pipe(stylemod({
+      moduleId: function(file) {
+        return path.basename(file.path, path.extname(file.path)) + '-styles';
+      }
+    }))
     .pipe(gulp.dest('css'))
-    .pipe(browserSync.stream({match: '**/*.css'}));
+    .pipe(browserSync.stream({match: 'css/*.html'}));
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['*.scss', 'sass/*-demo.scss'], ['demosass']);
+  gulp.watch(['*.scss', 'sass/*-demo.scss'], ['sass']);
 });
 
 gulp.task('serve', function() {
@@ -64,7 +71,7 @@ gulp.task('serve', function() {
   });
 
   gulp.watch(['css/*.css', '*.html', '*.js']).on('change', browserSync.reload);
-  gulp.watch(['*.scss', 'sass/*-demo.scss'], ['demosass']);
+  gulp.watch(['*.scss', 'sass/*-demo.scss'], ['sass']);
 });
 
 gulp.task('bump:patch', function(){
@@ -86,7 +93,7 @@ gulp.task('bump:major', function(){
 });
 
 gulp.task('default', function(callback) {
-  gulpSequence('clean', 'demosass')(callback);
+  gulpSequence('clean', 'sass')(callback);
 });
 
 /**
