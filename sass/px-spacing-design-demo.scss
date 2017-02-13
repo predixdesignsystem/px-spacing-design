@@ -33,20 +33,24 @@ PAGE. IT SHOULD NOT PROVIDE RULES FOR THE MODULE.
 @import "px-typography-design/_base.typography.scss";
 
 // Component
+.demoBox {
+  border: 1px solid var(--px-spacing-demo-border-color, $gray4);
+  width:max-content
+}
 
-#parent {
+.parent {
   display: block;
   width: 250px;
   height: 100px;
   background-color: green;
-  opacity: 0.8;
+  opacity: 0.3;
 }
-#child {
+.child {
   display: block;
   width: 100%;
   height: 100%;
   background-color: blue;
-  opacity: .5; 
+  opacity: .6;
 }
 
 $inuit-enable-margins : true;
