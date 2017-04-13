@@ -1,6 +1,6 @@
 {
   "name": "px-spacing-design",
-  "version": "0.4.4",
+  "version": "1.0.0",
   "authors": [
     "General Electric",
     "Harry Roberts <harry@csswizardry.com>"
@@ -32,10 +32,10 @@
     "LICENSE.md"
   ],
   "dependencies": {
-    "px-defaults-design": "^1.0.2"
+    "px-defaults-design": "^2.0.0"
   },
   "devDependencies": {
-    "px-starter-kit-design": "^0.7.0",
-    "px-sass-doc": "^0.4.3"
+    "px-starter-kit-design": "^1.0.0",
+    "px-sass-doc": "^1.0.0"
   }
 }
