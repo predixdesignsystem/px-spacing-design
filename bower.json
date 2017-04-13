@@ -32,7 +32,7 @@
     "LICENSE.md"
   ],
   "dependencies": {
-    "px-defaults-design": "^2.0.0"
+    "px-defaults-design": "^1.0.0"
   },
   "devDependencies": {
     "px-starter-kit-design": "^1.0.0",
