@@ -1,10 +1,10 @@
-# Spacing
+# px-spacing-design
 
 The Predix UI Spacing module is a collection of helper classes for spacings like margin and padding. This module is a fork of inuitcss' [spacing](https://github.com/inuitcss/trumps.spacing) module.
 
-## Dependency
+## Dependencies
 
-Predix UI's Spacing module depends on one other PX module:
+The px-spacing-design module depends on one other Px module:
 
 * [px-defaults-design](https://github.com/PredixDev/px-defaults-design)
 
@@ -236,4 +236,4 @@ These classes are available if the following variable flags are set to `true`:
 * `u-ph0`: remove padding right and left
 * `u-pv0`: remove padding top and bottom
 
-view the full API [here](http://predixdev.github.io/px-spacing-design/sassdoc/)
+View the full API [here](http://predixdev.github.io/px-spacing-design/sassdoc/)
