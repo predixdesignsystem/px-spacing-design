@@ -6,7 +6,7 @@
   <link rel="import" href="../css/px-spacing-design-demo-styles.html" />
 
 <!-- Demo DOM module -->
-<dom-module id="local-element-demo">
+<dom-module id="px-spacing-design-demo">
   <template>
   <!-- 0: Import the styles-->
   <style include="px-spacing-design-demo-styles" is="custom-style"></style>
@@ -306,7 +306,7 @@ u-pv0  <!-- remove padding top and bottom -->
 <!-- 6: Handle selectedOptions, update demo -->
 <script>
   Polymer({
-  is: 'local-element-demo',
+  is: 'px-spacing-design-demo',
 
     attached : function(){
       var boundHandler = this._handleOptionsUpdated.bind(this);
