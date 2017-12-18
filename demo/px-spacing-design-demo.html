@@ -23,7 +23,7 @@
   selected-options="{{selectedOptions}}">
 
 <!-- 2: Set Options -->
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Margin Size"
   choose-with="dropdown"
   choices='[
@@ -42,7 +42,7 @@
   default-choice="regular (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Margin Direction"
   choose-with="dropdown"
   choices='[
@@ -57,7 +57,7 @@
   default-choice="all (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Padding Size"
   choose-with="dropdown"
   choices='[
@@ -71,7 +71,7 @@
   default-choice="regular (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Padding Direction"
   choose-with="dropdown"
   choices='[
@@ -86,29 +86,29 @@
   default-choice="all (default)">
 </px-sass-doc-option>
 
-<px-sass-doc-option
+<px-sass-doc-option slot="options"
   option-name="Reverse RTL"
   choose-with="boolean">
 </px-sass-doc-option>
 
 <!-- 3: Make HTML Demo -->
-<section id="demoHTML" class="demoBox" data-slot="demoHTML" dir="{{direction}}">
+<section id="demoHTML" class="demoBox" slot="demo-html" dir="{{direction}}">
 <div class$="parent {{spacingClasses}}">
   <div class="child"></div>
 </div>
 </section>
 
 <!-- 4: Set Import Slot -->
-<section data-slot="import">
+<section slot="import">
 {{importCode}}
 </section>
 
 <!-- 5: Set Usage HTML -->
-<section data-slot="intro">
+<section slot="intro">
 
 </section>
 
-<section data-slot="usage">
+<section slot="usage">
 The conventions used for the classes in the spacing module are as follows:
 - <strong>type:</strong> <code class="code code--inline">m</code> Margin, or <code class="code code--inline">p</code> Padding
 - <strong>direction:</strong> <code class="code code--inline">t</code> Top, <code class="code code--inline">r</code> Right, <code class="code code--inline">b</code> Bottom, <code class="code code--inline">l</code> Left, <code class="code code--inline">h</code> Horizontal (left and right), <code class="code code--inline">v</code> Vertical (top and bottom), or omitted for All directions
